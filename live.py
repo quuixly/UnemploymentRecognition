@@ -7,7 +7,7 @@ model = load_model("97.keras")
 classes = ["employed", "unemployed"]
 
 IMG_SIZE = 48
-ZOOM_FACTOR = 3
+ZOOM_FACTOR = 4
 
 
 cap = cv2.VideoCapture(0)
@@ -31,6 +31,7 @@ while True:
 
     gray = cv2.cvtColor(zoom_frame, cv2.COLOR_BGR2GRAY)
     img = cv2.resize(gray, (IMG_SIZE, IMG_SIZE))
+    img_cp = cv2.resize(img, (600, 600))
     img = img.astype("float32")
     img = np.expand_dims(img, axis=-1)
     img = np.expand_dims(img, axis=0)
@@ -40,10 +41,10 @@ while True:
     idx = 1 if prob > 0.5 else 0
     label = f"{classes[idx]} ({prob:.2f})"
 
-    cv2.putText(zoom_frame, label, (10, 40),
+    cv2.putText(img_cp, label, (10, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
 
-    cv2.imshow("UnemploymentRecognition", zoom_frame)
+    cv2.imshow("UnemploymentRecognition", img_cp)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

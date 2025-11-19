@@ -8,6 +8,9 @@ The model uses a custom CNN architecture containing only 160k parameters. Due to
 
 ![Training example](training_example.png).
 
+(Make sure both ears are visible and the face is close enough (the forehead is visible, but not the hair))
+
+)
 ## Dataset
 https://www.kaggle.com/datasets/samithsachidanandan/human-face-emotions
 
