@@ -8,9 +8,8 @@ The model uses a custom CNN architecture containing only 160k parameters. Due to
 
 ![Training example](training_example.png).
 
-(Make sure both ears are visible and the face is close enough (the forehead is visible, but not the hair))
+Move your head and test which position the model starts recognizing you (raising your eyebrows increases the model's confidence when smiling).
 
-)
 ## Dataset
 https://www.kaggle.com/datasets/samithsachidanandan/human-face-emotions
 
@@ -20,4 +19,5 @@ https://www.kaggle.com/datasets/samithsachidanandan/human-face-emotions
 * Validation recall: 96%
 * Validation accuracy: 97%
 
----
+# Future work
+* add more training examples of the face from different angles
