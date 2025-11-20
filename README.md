@@ -19,5 +19,19 @@ https://www.kaggle.com/datasets/samithsachidanandan/human-face-emotions
 * Validation recall: 96%
 * Validation accuracy: 97%
 
-# Future work
-* add more training examples of the face from different angles
+## Installation
+Make sure you have Python 3.13.7 installed. Then run the following commands in your terminal:
+```bash
+git clone https://github.com/quuixly/UnemploymentRecognition.git
+cd UnemploymentRecognition
+python -m venv .venv
+source .venv/bin/activate
+pip install opencv-python
+pip install tensorflow
+pip install numpy
+python live.py
+```
+The application will run automatically.
+
+## Future work
+* add more training examples of the face from different angles and distances.
